@@ -1,0 +1,33 @@
+// http://bits.dezby.com/tools/grid.less | Stephen Lovell | grid.LESS plugin beta v2.5 | 04.26.2011 | GPL & MIT 
+
+//DEFAULT SETTINGS
+
+//You can manually determine the page width OR the column width, but not both at the same time.
+
+@pw: 960px; //Manually Set page width. 
+@cw: (@pw - (@cols * @gttr))/@cols; //Automatically Set Column width.
+
+//@pw: (@gttr + @cw) * @cols; //Automatically Set Page Width.
+//@cw: 40px; //Manually Set col width.
+
+@cols: 16; //Manually Set# of Columns
+@gttr: 20px; //Manually Set Gutter Width
+
+
+@topd: 20px; //Default Top Margin value
+@botd: 0; //Default Bottom Margin value
+@padsd: 10px; //Default R-L Padding value
+
+
+//ENGINE
+
+.grd (@gc:pink) {background-color: @gc;background-image:-webkit-gradient(linear, 0 0, 100% 0, color-stop(0.5, rgba(255,255,255,0.199219)),color-stop(0.5,rgba(255,255,255,1)), to(rgba(255,255,255,1)));background-image: -moz-linear-gradient(0deg, rgba(255,255,255,.2) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1)),-moz-linear-gradient(0deg, rgba(255,255,255,.2) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1));background-image: -o-linear-gradient(0deg, rgba(255,255,255,.2) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1));background-image: linear-gradient(0deg, rgba(255,255,255,.2) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1));-webkit-background-size: @pw / @cols, @pw / @cols;background-size: @pw / @cols, @pw / @cols;background-position: (@gttr / 2) * -1 0, (@cw / 2) * -1 ;}
+
+.col(@col:1,@shrink:0px,@top:@topd,@bot:0px,@pads:@padsd){@gttrv:@gttr / 2;@wdth: (@pw / @cols) * @col - @gttr - (@pads * 2) + @shrink * -1;float:left;display:inline;margin:@top @gttrv + @shrink @bot @gttrv;width: @wdth;padding:0 @pads;}
+
+.psh(@push) {position: relative;left: (@pw / @cols) * @push;}
+.pll(@pull) {.psh(0 - @pull);} 
+
+/* LIBRARY STYLES */
+
+.clear {clear: both;}
