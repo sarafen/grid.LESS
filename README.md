@@ -60,7 +60,7 @@ SETUP/INSTALLATION
 
 			This would switch the placement of of these two elements on a 12 col layout.
 
- 5.) Turn the visual horizontal background grid on to check your page alignment by including the .grid(); class on your page's #wrapper element.
+ 5.) Turn the visual horizontal background grid on to check your page alignment by including the .grd(); class on your page's #wrapper element.
 
 		EX: (Assuming your site's wrapper element is called #wrapper.)
 
@@ -70,7 +70,7 @@ SETUP/INSTALLATION
 			OR set the color yourself from the default light red/pink
 			
 			
-			#wrapper {.grid(#333);}
+			#wrapper {.grd(#333);}
 			
 
 DEFINITIONS
