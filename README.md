@@ -3,7 +3,6 @@ grid.LESS
 
 An **open** grid system for use with the LESS stylesheet language, based on, but not bound by the 960.gs
 
-<http://bits.dezby.com/tools/grid.less/usage>
 
 SETUP/INSTALLATION 
 -----
