@@ -1,3 +1,3 @@
-The license under which the grid.LESS plugin for LESS is released is the GPLv23(or later) from the Free Software Foundation.
+The license under which the grid.LESS plugin for LESS is released is the GPLv2 (or later) from the Free Software Foundation.
 
 http://www.gnu.org/licenses/gpl.html
